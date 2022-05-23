@@ -12,7 +12,7 @@ const options = program.opts();
 console.log(options);
 
 if (options.analyze){
-  getProjectStructure().then((result) => {
-    console.log(result);
+  getProjectStructure(0, process.cwd()).then((result) => {
+    console.dir(result, { depth: 4});
   });
 }
